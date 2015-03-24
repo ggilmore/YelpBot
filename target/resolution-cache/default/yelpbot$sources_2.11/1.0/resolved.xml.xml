@@ -4,7 +4,7 @@
 		module="yelpbot$sources_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20150323201139"
+		publication="20150323214125"
 	/>
 	<configurations>
 		<conf name="default" visibility="public" description=""/>

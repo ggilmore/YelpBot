@@ -4,7 +4,7 @@
 		module="yelpbot_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20150323201135"
+		publication="20150323214123"
 	>
 		<description>
 		YelpBot
@@ -33,5 +33,6 @@
 		<dependency org="org.scala-lang" name="scala-compiler" rev="2.11.6" conf="scala-tool->default,optional(default)"/>
 		<dependency org="org.scala-lang" name="scala-library" rev="2.11.6" conf="scala-tool->default,optional(default);compile->default(compile)"/>
 		<dependency org="org.scalaj" name="scalaj-http_2.11" rev="1.1.4" conf="compile->default(compile)"/>
+		<dependency org="io.spray" name="spray-json_2.11" rev="1.3.1" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>
