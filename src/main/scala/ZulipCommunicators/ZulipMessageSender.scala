@@ -4,6 +4,8 @@ package ZulipCommunicators
  * Created by gmgilmore on 3/23/15.
  */
 
+import java.net.SocketTimeoutException
+
 import Queues._
 import MessageClasses.{ZulipOutboundMessage, ZulipInboundMessage}
 
@@ -22,7 +24,10 @@ object ZulipMessageSender extends App {
     def run():Unit = {
       while(true){
         val msg = Queues.takeFromZulipOutQueue
-        Queues.putOnZulipInQueue(sendToZulip(message = msg))
+        sendToZulip(message = msg) match {
+          case Some(message)=> Queues.putOnZulipInQueue(message)
+          case None =>
+        }
       }
     }
   })
@@ -38,14 +43,28 @@ object ZulipMessageSender extends App {
 //  Queues.putOnZulipOutQueue(ZulipOutboundMessage("lyn.nagara@gmail.com", true, "", "!!!!!!!"))
 
   def sendToZulip(addr:String = ZULIP_ADDR_MESSAGES, authName:String = BOT_NAME,
-                  authPW:String = SecretKeys.ZULIP_BOT_KEY, message:ZulipOutboundMessage):ZulipInboundMessage ={
+                  authPW:String = SecretKeys.ZULIP_BOT_KEY, message:ZulipOutboundMessage):Option[ZulipInboundMessage] ={
     require(addr != null, "Null address")
     require(authName != null, "Null authName")
     require(authPW != null, "Null authPW")
     require(message != null, "Null message")
 
-    if (message.isPrivate) ZulipInboundMessage(Http(addr).auth(authName, authPW).postForm(Seq("type" -> "private", "to" -> message.target, "content" ->message.content )).asString)
-    else ZulipInboundMessage(Http(addr).auth(authName, authPW).postForm(Seq("type" -> "strean", "to" -> message.target,  "subject" -> message.subject,  "content" ->message.content )).asString)
+    if (message.isPrivate) {
+      try {
+        Some(ZulipInboundMessage(Http(addr).auth(authName, authPW).postForm(Seq("type" -> "private", "to" -> message.target, "content" -> message.content)).asString))
+      }
+      catch {
+        case e:SocketTimeoutException => None
+      }
+    }
+    else {
+      try {
+        Some(ZulipInboundMessage(Http(addr).auth(authName, authPW).postForm(Seq("type" -> "strean", "to" -> message.target, "subject" -> message.subject, "content" -> message.content)).asString))
+      }
+      catch {
+        case e: SocketTimeoutException => None
+      }
+    }
   }
 
 ////  println(sendToZulip(target="lyn.nagara@gmail.com", content = "test", isPrivate = true))
