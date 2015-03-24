@@ -2,63 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfbbdd66-b08a-4499-bb65-1e300920edbf" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$fb8ffd0dbac998545396$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$fb8ffd0dbac998545396$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$fb8ffd0dbac998545396.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$fb8ffd0dbac998545396.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/input_dsp" afterPath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/input_dsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.11/inputs" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.11/inputs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.11/output" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.11/output" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/output_dsp" afterPath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/output_dsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/Object.scala" afterPath="$PROJECT_DIR$/src/main/scala/Object.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.sbt" afterPath="$PROJECT_DIR$/build.sbt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sbt_2.11-default.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sbt_2.11-default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_2.11-default.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_2.11-default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-compile-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-compile-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-compile.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-compile.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-docs.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-docs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-optional.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-optional.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-plugin.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-pom.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-provided.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-provided.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-runtime-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-runtime-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-runtime.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-runtime.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-scala-tool.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-scala-tool.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-sources.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-sources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-test-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-test-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-test.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-test.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-compile-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-compile-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-compile.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-compile.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-docs.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-docs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-optional.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-optional.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-plugin.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-pom.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-provided.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-provided.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-runtime-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-runtime-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-runtime.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-runtime.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-scala-tool.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-scala-tool.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-sources.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-sources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-test-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-test-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-test.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-test.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/test/managedClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/updateSbtClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/updateSbtClassifiers/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/default/yelpbot$sbt_2.11/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/resolution-cache/default/yelpbot$sbt_2.11/1.0/resolved.xml.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/default/yelpbot$sources_2.11/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/resolution-cache/default/yelpbot$sources_2.11/1.0/resolved.xml.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/default/yelpbot$sources_javadoc_2.11/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/resolution-cache/default/yelpbot$sources_javadoc_2.11/1.0/resolved.xml.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/default/yelpbot_2.11/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/resolution-cache/default/yelpbot_2.11/1.0/resolved.xml.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/default/yelpbot$sbt_2.11/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/default/yelpbot$sbt_2.11/1.0/resolved.xml.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/default/yelpbot$sources_2.11/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/default/yelpbot$sources_2.11/1.0/resolved.xml.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/default/yelpbot$sources_javadoc_2.11/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/default/yelpbot$sources_javadoc_2.11/1.0/resolved.xml.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/default/yelpbot_2.11/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/default/yelpbot_2.11/1.0/resolved.xml.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/yelpbot.iml" afterPath="$PROJECT_DIR$/.idea/modules/yelpbot.iml" />
     </list>
     <ignored path="YelpBot.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -103,11 +47,9 @@
       <file leaf-file-name="Object.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/Object.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7266515" vertical-offset="251" max-vertical-offset="690">
+            <state vertical-scroll-proportion="1.0983263" vertical-offset="0" max-vertical-offset="645">
               <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-              <folding>
-                <element signature="e#46#92#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -115,7 +57,7 @@
       <file leaf-file-name="SecretKeys.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/SecretKeys.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+            <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="225">
               <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
               <folding />
             </state>
@@ -125,7 +67,7 @@
       <file leaf-file-name="build.sbt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.sbt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
+            <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="210">
               <caret line="8" column="60" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
               <folding />
             </state>
@@ -151,9 +93,10 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="x" value="-11" />
+    <option name="y" value="39" />
     <option name="width" value="1440" />
-    <option name="height" value="877" />
+    <option name="height" value="847" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -279,6 +222,235 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree">
+    <UpdateInfo date="Moments ago" ActionInfo="_Update">
+      <UpdatedFiles>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated from server" />
+          <option name="myStatusName" value="Changed on server" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CHANGED_ON_SERVER" />
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Updated" />
+            <option name="myStatusName" value="Changed" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="UPDATED" />
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/resolution-cache/default/yelpbot-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.properties</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/resolution-cache/default/yelpbot-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/resolution-cache/reports/default-yelpbot-build-compile-internal.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/resolution-cache/reports/default-yelpbot-build-compile.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/resolution-cache/reports/default-yelpbot-build-docs.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/resolution-cache/reports/default-yelpbot-build-optional.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/resolution-cache/reports/default-yelpbot-build-plugin.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/resolution-cache/reports/default-yelpbot-build-pom.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/resolution-cache/reports/default-yelpbot-build-provided.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/resolution-cache/reports/default-yelpbot-build-runtime-internal.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/resolution-cache/reports/default-yelpbot-build-runtime.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/resolution-cache/reports/default-yelpbot-build-scala-tool.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/resolution-cache/reports/default-yelpbot-build-sources.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/resolution-cache/reports/default-yelpbot-build-test-internal.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/resolution-cache/reports/default-yelpbot-build-test.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/streams/$global/ivyConfiguration/$global/streams/out</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.10/inputs</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.10/output</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/streams/compile/compileIncremental/$global/streams/out</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/out</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/$global/streams/export</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/streams/compile/exportedProducts/$global/streams/export</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/$global/streams/export</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/streams/compile/managedClasspath/$global/streams/export</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/$global/streams/export</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/$global/streams/export</PATH>
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Created" />
+            <option name="myStatusName" value="Created" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="CREATED" />
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/.gitignore</PATH>
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Deleted" />
+            <option name="myStatusName" value="Deleted" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="true" />
+            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/project/target/config-classes/$7b39d58e57b78c248d1c$$anonfun$$sbtdef$1.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/project/target/config-classes/$7b39d58e57b78c248d1c$.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/project/target/config-classes/$7b39d58e57b78c248d1c.cache</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/project/target/config-classes/$7b39d58e57b78c248d1c.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/config-classes/$4758b1599a9525e0c565$$anonfun$$sbtdef$1.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/config-classes/$4758b1599a9525e0c565$.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/config-classes/$4758b1599a9525e0c565.cache</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/config-classes/$4758b1599a9525e0c565.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/config-classes/$80cb6440d0681014ea76$$anonfun$$sbtdef$1.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/config-classes/$80cb6440d0681014ea76$.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/config-classes/$80cb6440d0681014ea76.cache</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/config-classes/$80cb6440d0681014ea76.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/config-classes/$a171645640a813c0af94$$anonfun$$sbtdef$1.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/config-classes/$a171645640a813c0af94$.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/config-classes/$a171645640a813c0af94.cache</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/config-classes/$a171645640a813c0af94.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/config-classes/$f04d1d9944b75ceca28e$$anonfun$$sbtdef$1.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/config-classes/$f04d1d9944b75ceca28e$.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/config-classes/$f04d1d9944b75ceca28e.cache</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/config-classes/$f04d1d9944b75ceca28e.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/config-classes/$fafd10f8b6bc6bc395a3$$anonfun$$sbtdef$1$$anonfun$apply$1.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/config-classes/$fafd10f8b6bc6bc395a3$$anonfun$$sbtdef$1.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/config-classes/$fafd10f8b6bc6bc395a3$.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/config-classes/$fafd10f8b6bc6bc395a3.cache</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/project/target/config-classes/$fafd10f8b6bc6bc395a3.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/.history</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/default/yelpbot$sbt_2.11/1.0/resolved.xml.properties</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/default/yelpbot$sbt_2.11/1.0/resolved.xml.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/default/yelpbot$sources_2.11/1.0/resolved.xml.properties</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/default/yelpbot$sources_2.11/1.0/resolved.xml.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/default/yelpbot$sources_javadoc_2.11/1.0/resolved.xml.properties</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/default/yelpbot$sources_javadoc_2.11/1.0/resolved.xml.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/default/yelpbot_2.11/1.0/resolved.xml.properties</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/default/yelpbot_2.11/1.0/resolved.xml.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sbt_2.11-default.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_2.11-default.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-compile-internal.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-compile.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-docs.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-optional.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-plugin.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-pom.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-provided.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-runtime-internal.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-runtime.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-scala-tool.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-sources.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-test-internal.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot$sources_javadoc_2.11-test.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-compile-internal.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-compile.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-docs.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-optional.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-plugin.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-pom.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-provided.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-runtime-internal.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-runtime.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-scala-tool.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-sources.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-test-internal.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/reports/default-yelpbot_2.11-test.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/reports/ivy-report.css</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/resolution-cache/reports/ivy-report.xsl</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/input_dsp</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/output_dsp</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/streams/$global/ivySbt/$global/streams/out</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/streams/$global/projectDescriptors/$global/streams/out</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/streams/$global/update/$global/streams/out</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.11/inputs</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.11/output</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/streams/$global/updateSbtClassifiers/$global/streams/out</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/streams/compile/unmanagedClasspath/$global/streams/export</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/streams/compile/unmanagedJars/$global/streams/export</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/$global/streams/export</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/streams/runtime/managedClasspath/$global/streams/export</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/streams/runtime/unmanagedClasspath/$global/streams/export</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/streams/runtime/unmanagedJars/$global/streams/export</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/$global/streams/export</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/streams/test/managedClasspath/$global/streams/export</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/streams/test/unmanagedClasspath/$global/streams/export</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/streams/test/unmanagedJars/$global/streams/export</PATH>
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Restored" />
+            <option name="myStatusName" value="Will be restored" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="RESTORED" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Modified" />
+          <option name="myStatusName" value="Modified" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MODIFIED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Skipped" />
+          <option name="myStatusName" value="Skipped" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SKIPPED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with conflicts" />
+          <option name="myStatusName" value="Will be merged with conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_CONFLICTS" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with tree conflicts" />
+          <option name="myStatusName" value="Merged with tree conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with property conflicts" />
+          <option name="myStatusName" value="Will be merged with property conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged" />
+          <option name="myStatusName" value="Will be merged" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Not in repository" />
+          <option name="myStatusName" value="Not in repository" />
+          <option name="mySupportsDeletion" value="true" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UNKNOWN" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally added" />
+          <option name="myStatusName" value="Locally added" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_ADDED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally removed" />
+          <option name="myStatusName" value="Locally removed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_REMOVED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Switched" />
+          <option name="myStatusName" value="Switched" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SWITCHED" />
+        </FILE-GROUP>
+      </UpdatedFiles>
+    </UpdateInfo>
   </component>
   <component name="RunManager" selected="Application.Junk">
     <configuration default="false" name="Junk" type="Application" factoryName="Application" temporary="true">
@@ -669,11 +841,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5269000" />
+    <option name="totallyTimeSpent" value="5435000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
-    <editor active="true" />
+    <frame x="-11" y="39" width="1440" height="847" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -683,13 +855,11 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953367" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32980132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -697,11 +867,13 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21346705" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40509555" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40509555" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953367" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -744,9 +916,71 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#46#92#0" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/SecretKeys.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="225">
+          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.sbt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="210">
+          <caret line="8" column="60" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/test.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="255">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Object.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/SecretKeys.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="225">
+          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.sbt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="210">
+          <caret line="8" column="60" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/test.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="255">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Object.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -792,11 +1026,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/Object.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7266515" vertical-offset="251" max-vertical-offset="690">
+        <state vertical-scroll-proportion="1.0983263" vertical-offset="0" max-vertical-offset="645">
           <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding>
-            <element signature="e#46#92#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
