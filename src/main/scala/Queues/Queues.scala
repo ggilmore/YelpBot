@@ -1,11 +1,12 @@
+package Queues
+
 /**
  * Created by gmgilmore on 3/24/15.
  */
 
-import java.util.concurrent
 import java.util.concurrent.LinkedBlockingQueue
 
-import MessageClasses.{ZulipOutboundMessage, ZulipInboundMessage}
+import MessageClasses.{ZulipInboundMessage, ZulipOutboundMessage}
 
 object Queues {
 

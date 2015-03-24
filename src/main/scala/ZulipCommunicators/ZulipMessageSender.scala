@@ -4,8 +4,8 @@ package ZulipCommunicators
  * Created by gmgilmore on 3/23/15.
  */
 
-
-import MessageClasses.ZulipInboundMessage
+import Queues._
+import MessageClasses.{ZulipOutboundMessage, ZulipInboundMessage}
 
 import scalaj.http.Http
 object ZulipMessageSender extends App {
@@ -18,16 +18,30 @@ object ZulipMessageSender extends App {
 
   private val ZULIP_ADDR_EVENTS = "https://api.zulip.com/v1/events"
 
-//  println(Http("https://api.zulip.com/v1/messages").auth("yelpbot-bot@students.hackerschool.com", "NK3ilaGgyV9TxCikfEBbJVmBUKzNYKMx").postForm(Seq("type" -> "private", "to" -> "ggilmore@mit.edu", "content" ->"I come not, friends, to steal away your hearts." )).asString)
+  private val sender:Thread = new Thread(new Runnable{
+    def run():Unit = {
+      while(true){
+        val msg = Queues.takeFromZulipOutQueue
+        Queues.putOnZulipInQueue(sendToZulip(message = msg))
+      }
+    }
+  })
+
+  sender.start
+
+//  Queues.putOnZulipOutQueue(ZulipOutboundMessage("lyn.nagara@gmail.com", true, "", "Hi!"))
+//
+//  val msg = Queues.takeFromZulipInQueue
+//  println(msg)
+//
+//
+//  Queues.putOnZulipOutQueue(ZulipOutboundMessage("lyn.nagara@gmail.com", true, "", "!!!!!!!"))
 
   def sendToZulip(addr:String = ZULIP_ADDR_MESSAGES, authName:String = BOT_NAME,
-                  authPW:String = SecretKeys.ZULIP_BOT_KEY, isPrivate:Boolean = false,
-                  target:String, subject:String = "", content:String):ZulipInboundMessage ={
-    if (isPrivate) ZulipInboundMessage(Http(addr).auth(authName, authPW).postForm(Seq("type" -> "private", "to" -> target, "content" ->content )).asString)
-    else ZulipInboundMessage(Http(addr).auth(authName, authPW).postForm(Seq("type" -> "strean", "to" -> target,  "subject" -> subject,  "content" ->content )).asString)
+                  authPW:String = SecretKeys.ZULIP_BOT_KEY, message:ZulipOutboundMessage):ZulipInboundMessage ={
+    if (message.isPrivate) ZulipInboundMessage(Http(addr).auth(authName, authPW).postForm(Seq("type" -> "private", "to" -> message.target, "content" ->message.content )).asString)
+    else ZulipInboundMessage(Http(addr).auth(authName, authPW).postForm(Seq("type" -> "strean", "to" -> message.target,  "subject" -> message.subject,  "content" ->message.content )).asString)
   }
-
-
 
 ////  println(sendToZulip(target="lyn.nagara@gmail.com", content = "test", isPrivate = true))
 ////  println(registerQueue)
