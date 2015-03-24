@@ -6,17 +6,17 @@ package Queues
 
 import java.util.concurrent.LinkedBlockingQueue
 
-import MessageClasses.{ZulipInboundMessage, ZulipOutboundMessage}
+import MessageClasses.{RawZulipInboundMessage, ZulipOutboundMessage}
 
 object Queues {
 
-  private val ZulipInQueue:LinkedBlockingQueue[ZulipInboundMessage] = new LinkedBlockingQueue[ZulipInboundMessage]
+  private val ZulipInQueue:LinkedBlockingQueue[RawZulipInboundMessage] = new LinkedBlockingQueue[RawZulipInboundMessage]
 
   private val ZulipOutQueue:LinkedBlockingQueue[ZulipOutboundMessage] = new LinkedBlockingQueue[ZulipOutboundMessage]
 
-  def putOnZulipInQueue(msg:ZulipInboundMessage) = ZulipInQueue.put(msg)
+  def putOnZulipInQueue(msg:RawZulipInboundMessage) = ZulipInQueue.put(msg)
 
-  def takeFromZulipInQueue:ZulipInboundMessage = ZulipInQueue.take
+  def takeFromZulipInQueue:RawZulipInboundMessage = ZulipInQueue.take
 
   def putOnZulipOutQueue(msg:ZulipOutboundMessage) = ZulipOutQueue.put(msg)
 

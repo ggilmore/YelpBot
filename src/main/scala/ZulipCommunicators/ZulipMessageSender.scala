@@ -7,7 +7,7 @@ package ZulipCommunicators
 import java.net.SocketTimeoutException
 
 import Queues._
-import MessageClasses.{ZulipOutboundMessage, ZulipInboundMessage}
+import MessageClasses.{ZulipOutboundMessage, RawZulipInboundMessage}
 
 import scalaj.http.Http
 object ZulipMessageSender extends App {
@@ -43,7 +43,7 @@ object ZulipMessageSender extends App {
 //  Queues.putOnZulipOutQueue(ZulipOutboundMessage("lyn.nagara@gmail.com", true, "", "!!!!!!!"))
 
   def sendToZulip(addr:String = ZULIP_ADDR_MESSAGES, authName:String = BOT_NAME,
-                  authPW:String = SecretKeys.ZULIP_BOT_KEY, message:ZulipOutboundMessage):Option[ZulipInboundMessage] ={
+                  authPW:String = SecretKeys.ZULIP_BOT_KEY, message:ZulipOutboundMessage):Option[RawZulipInboundMessage] ={
     require(addr != null, "Null address")
     require(authName != null, "Null authName")
     require(authPW != null, "Null authPW")
@@ -51,7 +51,7 @@ object ZulipMessageSender extends App {
 
     if (message.isPrivate) {
       try {
-        Some(ZulipInboundMessage(Http(addr).auth(authName, authPW).postForm(Seq("type" -> "private", "to" -> message.target, "content" -> message.content)).asString))
+        Some(RawZulipInboundMessage(Http(addr).auth(authName, authPW).postForm(Seq("type" -> "private", "to" -> message.target, "content" -> message.content)).asString))
       }
       catch {
         case e:SocketTimeoutException => None
@@ -59,7 +59,7 @@ object ZulipMessageSender extends App {
     }
     else {
       try {
-        Some(ZulipInboundMessage(Http(addr).auth(authName, authPW).postForm(Seq("type" -> "strean", "to" -> message.target, "subject" -> message.subject, "content" -> message.content)).asString))
+        Some(RawZulipInboundMessage(Http(addr).auth(authName, authPW).postForm(Seq("type" -> "strean", "to" -> message.target, "subject" -> message.subject, "content" -> message.content)).asString))
       }
       catch {
         case e: SocketTimeoutException => None

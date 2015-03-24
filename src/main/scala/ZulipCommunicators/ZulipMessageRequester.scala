@@ -5,7 +5,7 @@ import java.net.SocketTimeoutException
 import scalaj.http.Http
 import ZulipMessageSender.BOT_NAME
 
-import MessageClasses.ZulipInboundMessage
+import MessageClasses.RawZulipInboundMessage
 import Queues._
 
 /**
@@ -37,15 +37,15 @@ object ZulipMessageRequester extends App {
 val msg = Queues.takeFromZulipInQueue
 println(msg)
 
-  def registerQueue:ZulipInboundMessage= ZulipInboundMessage(Http(ZULIP_ADDR_REGISTER).auth(BOT_NAME, SecretKeys.ZULIP_BOT_KEY).postData(s"""event_types=["message"]""").asString)
+  def registerQueue:RawZulipInboundMessage= RawZulipInboundMessage(Http(ZULIP_ADDR_REGISTER).auth(BOT_NAME, SecretKeys.ZULIP_BOT_KEY).postData(s"""event_types=["message"]""").asString)
 
-  def getLatestEvents(botKey:String = SecretKeys.ZULIP_BOT_KEY, eventQueueID:String = SecretKeys.QUEUE_ID, lastEventID: String = "0") :Option[ZulipInboundMessage] ={
+  def getLatestEvents(botKey:String = SecretKeys.ZULIP_BOT_KEY, eventQueueID:String = SecretKeys.QUEUE_ID, lastEventID: String = "0") :Option[RawZulipInboundMessage] ={
     require(botKey != null)
     require(eventQueueID != null)
     require(lastEventID != null)
 
     try {
-      Some(ZulipInboundMessage(Http(ZULIP_ADDR_EVENTS).auth(BOT_NAME, SecretKeys.ZULIP_BOT_KEY).params(Seq(("queue_id", eventQueueID), ("last_event_id", lastEventID))).asString))
+      Some(RawZulipInboundMessage(Http(ZULIP_ADDR_EVENTS).auth(BOT_NAME, SecretKeys.ZULIP_BOT_KEY).params(Seq(("queue_id", eventQueueID), ("last_event_id", lastEventID))).asString))
     }
     catch {
       case e: SocketTimeoutException => None
