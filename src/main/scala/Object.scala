@@ -28,7 +28,9 @@ object Junk extends App {
 //  println(Http("https://api.zulip.com/v1/messages").auth("yelpbot-bot@students.hackerschool.com", "NK3ilaGgyV9TxCikfEBbJVmBUKzNYKMx").postForm(Seq("type" -> "private", "to" -> "ggilmore@mit.edu", "content" ->"I come not, friends, to steal away your hearts." )).asString)
 //
 
-  def sendToZulip(addr:String = ZULIP_ADDR_MESSAGES, authName:String = BOT_NAME, authPW:String = SecretKeys.ZULIP_BOT_KEY, isPrivate:Boolean = false, target:String, subject:String = "", content:String):HttpResponse[String] ={
+  def sendToZulip(addr:String = ZULIP_ADDR_MESSAGES, authName:String = BOT_NAME,
+                  authPW:String = SecretKeys.ZULIP_BOT_KEY, isPrivate:Boolean = false,
+                  target:String, subject:String = "", content:String):HttpResponse[String] ={
     if (isPrivate) Http(addr).auth(authName, authPW).postForm(Seq("type" -> "private", "to" -> target, "content" ->content )).asString
     else Http(addr).auth(authName, authPW).postForm(Seq("type" -> "strean", "to" -> target,  "subject" -> subject,  "content" ->content )).asString
   }
