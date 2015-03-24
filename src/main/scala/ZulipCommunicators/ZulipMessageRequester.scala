@@ -34,8 +34,14 @@ object ZulipMessageRequester extends App {
 
   def registerQueue:ZulipInboundMessage= ZulipInboundMessage(Http(ZULIP_ADDR_REGISTER).auth(BOT_NAME, SecretKeys.ZULIP_BOT_KEY).postData(s"""event_types=["message"]""").asString)
 
-  def getLatestEvents(queueID:String = SecretKeys.ZULIP_BOT_KEY, eventQueueID:String = SecretKeys.QUEUE_ID, lastEventID: String = "0") :ZulipInboundMessage =
+  def getLatestEvents(botKey:String = SecretKeys.ZULIP_BOT_KEY, eventQueueID:String = SecretKeys.QUEUE_ID, lastEventID: String = "0") :ZulipInboundMessage ={
+    require(botKey != null)
+    require(eventQueueID != null)
+    require(lastEventID != null)
+
     ZulipInboundMessage(Http(ZULIP_ADDR_EVENTS).auth(BOT_NAME, SecretKeys.ZULIP_BOT_KEY).params(Seq(("queue_id",eventQueueID), ("last_event_id",lastEventID))).asString)
+
+  }
 
 
 

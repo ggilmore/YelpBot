@@ -39,6 +39,11 @@ object ZulipMessageSender extends App {
 
   def sendToZulip(addr:String = ZULIP_ADDR_MESSAGES, authName:String = BOT_NAME,
                   authPW:String = SecretKeys.ZULIP_BOT_KEY, message:ZulipOutboundMessage):ZulipInboundMessage ={
+    require(addr != null, "Null address")
+    require(authName != null, "Null authName")
+    require(authPW != null, "Null authPW")
+    require(message != null, "Null message")
+
     if (message.isPrivate) ZulipInboundMessage(Http(addr).auth(authName, authPW).postForm(Seq("type" -> "private", "to" -> message.target, "content" ->message.content )).asString)
     else ZulipInboundMessage(Http(addr).auth(authName, authPW).postForm(Seq("type" -> "strean", "to" -> message.target,  "subject" -> message.subject,  "content" ->message.content )).asString)
   }
