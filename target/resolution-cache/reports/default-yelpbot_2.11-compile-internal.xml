@@ -7,17 +7,36 @@
 		revision="1.0"
 		conf="compile-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20150323193040"/>
+		date="20150323201136"/>
 	<dependencies>
+		<module organisation="org.scalaj" name="scalaj-http_2.11">
+			<revision name="1.1.4" status="release" pubdate="20150209133623" resolver="public" artresolver="public" homepage="http://github.com/scalaj/scalaj-http" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="1">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="successful" details="" size="2262" time="740" location="/Users/gmgilmore/.ivy2/cache/org.scalaj/scalaj-http_2.11/ivy-1.1.4.xml" searched="true" original-local-location="/Users/gmgilmore/.ivy2/cache/org.scalaj/scalaj-http_2.11/ivy-1.1.4.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.11/1.1.4/scalaj-http_2.11-1.1.4.pom"/>
+				<caller organisation="default" name="yelpbot_2.11" conf="compile-internal, compile, provided, optional" rev="1.1.4" rev-constraint-default="1.1.4" rev-constraint-dynamic="1.1.4" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="scalaj-http_2.11" type="jar" ext="jar" status="successful" details="" size="105760" time="297" location="/Users/gmgilmore/.ivy2/cache/org.scalaj/scalaj-http_2.11/jars/scalaj-http_2.11-1.1.4.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.11/1.1.4/scalaj-http_2.11-1.1.4.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
 		<module organisation="org.scala-lang" name="scala-library">
-			<revision name="2.11.6" status="release" pubdate="20150225200105" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.11.6/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="0">
+			<revision name="2.11.6" status="release" pubdate="20150225200105" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.11.6/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master, runtime(*), master(compile), compile(*)" position="0">
 				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
 				<metadata-artifact status="no" details="" size="2653" time="0" location="/Users/gmgilmore/.ivy2/cache/org.scala-lang/scala-library/ivy-2.11.6.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.6/scala-library-2.11.6.pom"/>
 				<caller organisation="default" name="yelpbot_2.11" conf="compile-internal, compile, provided, optional" rev="2.11.6" rev-constraint-default="2.11.6" rev-constraint-dynamic="2.11.6" callerrev="1.0"/>
+				<caller organisation="org.scalaj" name="scalaj-http_2.11" conf="default, compile, runtime, master" rev="2.11.4" rev-constraint-default="2.11.4" rev-constraint-dynamic="2.11.4" callerrev="1.1.4"/>
 				<artifacts>
 					<artifact name="scala-library" type="jar" ext="jar" status="no" details="" size="5564007" time="0" location="/Users/gmgilmore/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.6.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.6/scala-library-2.11.6.jar"/>
 					</artifact>
+				</artifacts>
+			</revision>
+			<revision name="2.11.4" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="-1">
+				<evicted-by rev="2.11.6"/>
+				<caller organisation="org.scalaj" name="scalaj-http_2.11" conf="default, compile, runtime, master" rev="2.11.4" rev-constraint-default="2.11.4" rev-constraint-dynamic="2.11.4" callerrev="1.1.4"/>
+				<artifacts>
 				</artifacts>
 			</revision>
 		</module>

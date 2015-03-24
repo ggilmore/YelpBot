@@ -7,13 +7,47 @@
 [debug] == resolving dependencies for default#yelpbot_2.11;1.0 [compile]
 [debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scala-lang#scala-library;2.11.6 [compile->default(compile)]
 [info] Resolving org.scala-lang#scala-library;2.11.6 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@411b0960
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@67257715
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.6
 [debug] 	found org.scala-lang#scala-library;2.11.6 in sbt-chain
 [debug] 	[2.11.6] org.scala-lang#scala-library;2.11.6
 [debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scala-lang#scala-library;2.11.6 [compile->runtime]
 [debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scala-lang#scala-library;2.11.6 [compile->compile]
 [debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scala-lang#scala-library;2.11.6 [compile->master]
+[debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scalaj#scalaj-http_2.11;1.1.4 [compile->default(compile)]
+[info] Resolving org.scalaj#scalaj-http_2.11;1.1.4 ...
+[debug] sbt-chain: Checking cache for: dependency: org.scalaj#scalaj-http_2.11;1.1.4 {compile=[default(compile)]}
+[info] Resolving org.scalaj#scalaj-http_2.11;1.1.4 ...
+[debug] sbt-chain-delegate: Checking cache for: dependency: org.scalaj#scalaj-http_2.11;1.1.4 {compile=[default(compile)]}
+[debug] 		tried /Users/gmgilmore/.ivy2/local/org.scalaj/scalaj-http_2.11/1.1.4/ivys/ivy.xml
+[debug] 	local: no ivy file found for org.scalaj#scalaj-http_2.11;1.1.4
+[debug] 		tried /doesnotexist/repository/org.scalaj/scalaj-http_2.11/1.1.4/ivys/ivy.xml
+[debug] 	activator-launcher-local: no ivy file found for org.scalaj#scalaj-http_2.11;1.1.4
+[debug] 		tried /usr/local/Cellar/typesafe-activator/1.3.2/libexec/repository/org.scalaj/scalaj-http_2.11/1.1.4/ivys/ivy.xml
+[debug] 	activator-local: no ivy file found for org.scalaj#scalaj-http_2.11;1.1.4
+[debug] 		tried https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.11/1.1.4/scalaj-http_2.11-1.1.4.pom
+[debug] 	public: found md file for org.scalaj#scalaj-http_2.11;1.1.4
+[debug] 		=> https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.11/1.1.4/scalaj-http_2.11-1.1.4.pom (1.1.4)
+[debug] downloading https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.11/1.1.4/scalaj-http_2.11-1.1.4.pom ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.11/1.1.4/scalaj-http_2.11-1.1.4.pom
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.11/1.1.4/scalaj-http_2.11-1.1.4.pom.sha1
+[debug] sha1 OK for https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.11/1.1.4/scalaj-http_2.11-1.1.4.pom
+[debug] 	[SUCCESSFUL ] org.scalaj#scalaj-http_2.11;1.1.4!scalaj-http_2.11.pom(pom.original) (740ms)
+[debug] 		tried /Users/gmgilmore/.ivy2/local/org.scalaj/scalaj-http_2.11/1.1.4/jars/scalaj-http_2.11.jar
+[debug] 		tried /doesnotexist/repository/org.scalaj/scalaj-http_2.11/1.1.4/jars/scalaj-http_2.11.jar
+[debug] 		tried /usr/local/Cellar/typesafe-activator/1.3.2/libexec/repository/org.scalaj/scalaj-http_2.11/1.1.4/jars/scalaj-http_2.11.jar
+[debug] 		tried https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.11/1.1.4/scalaj-http_2.11-1.1.4.jar
+[debug] 	found org.scalaj#scalaj-http_2.11;1.1.4 in public
+[debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scalaj#scalaj-http_2.11;1.1.4 [compile->runtime]
+[debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scalaj#scalaj-http_2.11;1.1.4 [compile->compile]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.4 [compile->master(compile)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.6 [compile->master(compile)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.4 [compile->compile(*)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.6 [compile->compile(*)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.4 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.6 [runtime->compile]
+[debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scalaj#scalaj-http_2.11;1.1.4 [compile->master]
 [debug] resolving dependencies for configuration 'runtime'
 [debug] == resolving dependencies for default#yelpbot_2.11;1.0 [runtime]
 [debug] == resolving dependencies for default#yelpbot_2.11;1.0 [compile]
@@ -21,6 +55,17 @@
 [debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scala-lang#scala-library;2.11.6 [compile->runtime]
 [debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scala-lang#scala-library;2.11.6 [compile->compile]
 [debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scala-lang#scala-library;2.11.6 [compile->master]
+[debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scalaj#scalaj-http_2.11;1.1.4 [compile->default(compile)]
+[debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scalaj#scalaj-http_2.11;1.1.4 [compile->runtime]
+[debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scalaj#scalaj-http_2.11;1.1.4 [compile->compile]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.4 [compile->master(compile)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.6 [compile->master(compile)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.4 [compile->compile(*)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.6 [compile->compile(*)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.4 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.6 [runtime->compile]
+[debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scalaj#scalaj-http_2.11;1.1.4 [compile->master]
 [debug] resolving dependencies for configuration 'test'
 [debug] == resolving dependencies for default#yelpbot_2.11;1.0 [test]
 [debug] == resolving dependencies for default#yelpbot_2.11;1.0 [runtime]
@@ -29,6 +74,17 @@
 [debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scala-lang#scala-library;2.11.6 [compile->runtime]
 [debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scala-lang#scala-library;2.11.6 [compile->compile]
 [debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scala-lang#scala-library;2.11.6 [compile->master]
+[debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scalaj#scalaj-http_2.11;1.1.4 [compile->default(compile)]
+[debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scalaj#scalaj-http_2.11;1.1.4 [compile->runtime]
+[debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scalaj#scalaj-http_2.11;1.1.4 [compile->compile]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.4 [compile->master(compile)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.6 [compile->master(compile)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.4 [compile->compile(*)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.6 [compile->compile(*)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.4 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.6 [runtime->compile]
+[debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scalaj#scalaj-http_2.11;1.1.4 [compile->master]
 [debug] resolving dependencies for configuration 'provided'
 [debug] == resolving dependencies for default#yelpbot_2.11;1.0 [provided]
 [debug] resolving dependencies for configuration 'optional'
@@ -40,6 +96,17 @@
 [debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scala-lang#scala-library;2.11.6 [compile->runtime]
 [debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scala-lang#scala-library;2.11.6 [compile->compile]
 [debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scala-lang#scala-library;2.11.6 [compile->master]
+[debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scalaj#scalaj-http_2.11;1.1.4 [compile->default(compile)]
+[debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scalaj#scalaj-http_2.11;1.1.4 [compile->runtime]
+[debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scalaj#scalaj-http_2.11;1.1.4 [compile->compile]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.4 [compile->master(compile)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.6 [compile->master(compile)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.4 [compile->compile(*)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.6 [compile->compile(*)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.4 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.6 [runtime->compile]
+[debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scalaj#scalaj-http_2.11;1.1.4 [compile->master]
 [debug] == resolving dependencies for default#yelpbot_2.11;1.0 [optional]
 [debug] == resolving dependencies for default#yelpbot_2.11;1.0 [provided]
 [debug] resolving dependencies for configuration 'runtime-internal'
@@ -50,6 +117,17 @@
 [debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scala-lang#scala-library;2.11.6 [compile->runtime]
 [debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scala-lang#scala-library;2.11.6 [compile->compile]
 [debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scala-lang#scala-library;2.11.6 [compile->master]
+[debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scalaj#scalaj-http_2.11;1.1.4 [compile->default(compile)]
+[debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scalaj#scalaj-http_2.11;1.1.4 [compile->runtime]
+[debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scalaj#scalaj-http_2.11;1.1.4 [compile->compile]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.4 [compile->master(compile)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.6 [compile->master(compile)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.4 [compile->compile(*)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.6 [compile->compile(*)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.4 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.6 [runtime->compile]
+[debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scalaj#scalaj-http_2.11;1.1.4 [compile->master]
 [debug] == resolving dependencies for default#yelpbot_2.11;1.0 [optional]
 [debug] resolving dependencies for configuration 'test-internal'
 [debug] == resolving dependencies for default#yelpbot_2.11;1.0 [test-internal]
@@ -60,6 +138,17 @@
 [debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scala-lang#scala-library;2.11.6 [compile->runtime]
 [debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scala-lang#scala-library;2.11.6 [compile->compile]
 [debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scala-lang#scala-library;2.11.6 [compile->master]
+[debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scalaj#scalaj-http_2.11;1.1.4 [compile->default(compile)]
+[debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scalaj#scalaj-http_2.11;1.1.4 [compile->runtime]
+[debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scalaj#scalaj-http_2.11;1.1.4 [compile->compile]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.4 [compile->master(compile)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.6 [compile->master(compile)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.4 [compile->compile(*)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.6 [compile->compile(*)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.4 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)]
+[debug] == resolving dependencies org.scalaj#scalaj-http_2.11;1.1.4->org.scala-lang#scala-library;2.11.6 [runtime->compile]
+[debug] == resolving dependencies default#yelpbot_2.11;1.0->org.scalaj#scalaj-http_2.11;1.1.4 [compile->master]
 [debug] == resolving dependencies for default#yelpbot_2.11;1.0 [optional]
 [debug] == resolving dependencies for default#yelpbot_2.11;1.0 [provided]
 [debug] resolving dependencies for configuration 'plugin'
@@ -85,8 +174,6 @@
 [debug] == resolving dependencies org.scala-lang#scala-compiler;2.11.6->org.scala-lang#scala-library;2.11.6 [compile->runtime]
 [debug] == resolving dependencies org.scala-lang#scala-compiler;2.11.6->org.scala-lang#scala-library;2.11.6 [compile->compile]
 [debug] == resolving dependencies org.scala-lang#scala-compiler;2.11.6->org.scala-lang#scala-library;2.11.6 [compile->master]
-[debug] == resolving dependencies org.scala-lang#scala-compiler;2.11.6->org.scala-lang#scala-library;2.11.6 [compile->runtime(*)]
-[debug] == resolving dependencies org.scala-lang#scala-compiler;2.11.6->org.scala-lang#scala-library;2.11.6 [compile->compile]
 [debug] == resolving dependencies org.scala-lang#scala-compiler;2.11.6->org.scala-lang#scala-library;2.11.6 [compile->optional(default)]
 [debug] == resolving dependencies org.scala-lang#scala-compiler;2.11.6->org.scala-lang#scala-reflect;2.11.6 [compile->master(*)]
 [info] Resolving org.scala-lang#scala-reflect;2.11.6 ...
@@ -155,12 +242,18 @@
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.11.6!scala-library.jar
+[debug] 		tried https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.11/1.1.4/scalaj-http_2.11-1.1.4.jar
+[info] downloading https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.11/1.1.4/scalaj-http_2.11-1.1.4.jar ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.11/1.1.4/scalaj-http_2.11-1.1.4.jar
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.11/1.1.4/scalaj-http_2.11-1.1.4.jar.sha1
+[debug] sha1 OK for https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.11/1.1.4/scalaj-http_2.11-1.1.4.jar
+[info] 	[SUCCESSFUL ] org.scalaj#scalaj-http_2.11;1.1.4!scalaj-http_2.11.jar (297ms)
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.11.6!scala-compiler.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.11.6!scala-reflect.jar
 [debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.3!scala-xml_2.11.jar(bundle)
 [debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3!scala-parser-combinators_2.11.jar(bundle)
 [debug] 	[NOT REQUIRED] jline#jline;2.12.1!jline.jar
-[debug] :: resolution report :: resolve 56ms :: artifacts dl 3ms
+[debug] :: resolution report :: resolve 2626ms :: artifacts dl 304ms
 [debug] 	report for default#yelpbot_2.11;1.0 compile produced in /Users/gmgilmore/Dropbox/ScalaDev/YelpBot/target/resolution-cache/reports/default-yelpbot_2.11-compile.xml
 [debug] 	report for default#yelpbot_2.11;1.0 runtime produced in /Users/gmgilmore/Dropbox/ScalaDev/YelpBot/target/resolution-cache/reports/default-yelpbot_2.11-runtime.xml
 [debug] 	report for default#yelpbot_2.11;1.0 test produced in /Users/gmgilmore/Dropbox/ScalaDev/YelpBot/target/resolution-cache/reports/default-yelpbot_2.11-test.xml
@@ -174,5 +267,5 @@
 [debug] 	report for default#yelpbot_2.11;1.0 docs produced in /Users/gmgilmore/Dropbox/ScalaDev/YelpBot/target/resolution-cache/reports/default-yelpbot_2.11-docs.xml
 [debug] 	report for default#yelpbot_2.11;1.0 pom produced in /Users/gmgilmore/Dropbox/ScalaDev/YelpBot/target/resolution-cache/reports/default-yelpbot_2.11-pom.xml
 [debug] 	report for default#yelpbot_2.11;1.0 scala-tool produced in /Users/gmgilmore/Dropbox/ScalaDev/YelpBot/target/resolution-cache/reports/default-yelpbot_2.11-scala-tool.xml
-[debug] 	resolve done (56ms resolve - 3ms download)
+[debug] 	resolve done (2626ms resolve - 304ms download)
 [info] Done updating.

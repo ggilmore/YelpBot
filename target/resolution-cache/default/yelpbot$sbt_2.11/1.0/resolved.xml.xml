@@ -4,7 +4,7 @@
 		module="yelpbot$sbt_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20150323193040"
+		publication="20150323201139"
 	/>
 	<configurations>
 		<conf name="default" visibility="public"/>
