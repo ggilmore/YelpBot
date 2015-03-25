@@ -28,7 +28,25 @@ object ZulipResponserParser extends App {
         }
       }
     }
-
   }
+
+  def parseResponse[T](protocol:DefaultJsonProtocol, candidates:Seq[T], msg:String) = {
+
+    def tryConversion(candidates:Seq[T], errText:String = ""):Either[ParsingFailure, T] {
+      if (candidates.isEmpty) Left(ParsingError(errText))
+      else {
+        try {
+          Right(msg.parseJson.convertTo[candidates(0)])
+        }
+        catch {
+          case e: DeserializationException => tryConversion(candidates.drop(1), e.getMessage)
+        }
+
+      }
+    }
+    tryConversion(candidates)
+  }
+
+  // parseResponse()
 
 }
