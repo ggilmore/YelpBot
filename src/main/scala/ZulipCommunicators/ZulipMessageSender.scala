@@ -52,7 +52,7 @@ object ZulipMessageSender extends App {
 
     if (message.isPrivate) {
       try {
-        Some(RawZulipInboundMessage(Http(addr).auth(authName, authPW).postForm(Seq("type" -> "private", "to" -> message.target, "content" -> message.content)).asString))
+        Some(RawZulipInboundMessage(Http(addr).auth(authName, authPW).postForm(Seq("type" -> "private", "to" -> message.target, "content" -> message.content)).asString, MessageClasses.ZulipMessageSender))
       }
       catch {
         case e:SocketTimeoutException => None
@@ -60,7 +60,7 @@ object ZulipMessageSender extends App {
     }
     else {
       try {
-        Some(RawZulipInboundMessage(Http(addr).auth(authName, authPW).postForm(Seq("type" -> "strean", "to" -> message.target, "subject" -> message.subject, "content" -> message.content)).asString))
+        Some(RawZulipInboundMessage(Http(addr).auth(authName, authPW).postForm(Seq("type" -> "strean", "to" -> message.target, "subject" -> message.subject, "content" -> message.content)).asString, MessageClasses.ZulipMessageSender))
       }
       catch {
         case e: SocketTimeoutException => None

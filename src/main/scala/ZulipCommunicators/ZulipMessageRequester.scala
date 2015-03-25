@@ -37,7 +37,8 @@ object ZulipMessageRequester extends App {
 val msg = Queues.takeFromZulipInQueue
 println(msg)
 
-  def registerQueue:RawZulipInboundMessage= RawZulipInboundMessage(Http(ZULIP_ADDR_REGISTER).auth(BOT_NAME, SecretKeys.ZULIP_BOT_KEY).postData(s"""event_types=["message"]""").asString)
+  def registerQueue:RawZulipInboundMessage= RawZulipInboundMessage(Http(ZULIP_ADDR_REGISTER).auth(BOT_NAME, SecretKeys.ZULIP_BOT_KEY).postData(s"""event_types=["message"]""").asString,
+    MessageClasses.ZulipMessageRequesterNewQueueID)
 
   def getLatestEvents(botKey:String = SecretKeys.ZULIP_BOT_KEY, eventQueueID:String = SecretKeys.QUEUE_ID, lastEventID: String = "0") :Option[RawZulipInboundMessage] ={
     require(botKey != null)
@@ -45,7 +46,8 @@ println(msg)
     require(lastEventID != null)
 
     try {
-      Some(RawZulipInboundMessage(Http(ZULIP_ADDR_EVENTS).auth(BOT_NAME, SecretKeys.ZULIP_BOT_KEY).params(Seq(("queue_id", eventQueueID), ("last_event_id", lastEventID))).asString))
+      Some(RawZulipInboundMessage(Http(ZULIP_ADDR_EVENTS).auth(BOT_NAME, SecretKeys.ZULIP_BOT_KEY).params(Seq(("queue_id", eventQueueID), ("last_event_id", lastEventID))).asString,
+        MessageClasses.ZulipMessageRequesterGetMsgQueue))
     }
     catch {
       case e: SocketTimeoutException => None
