@@ -10,6 +10,7 @@ import Queues._
 import MessageClasses.{ZulipOutboundMessage, RawZulipInboundMessage}
 
 import scalaj.http.Http
+
 object ZulipMessageSender extends App {
 
   val BOT_NAME = "yelpbot-bot@students.hackerschool.com"
@@ -32,7 +33,7 @@ object ZulipMessageSender extends App {
     }
   })
 
-  sender.start
+  // sender.start
 
 //  Queues.putOnZulipOutQueue(ZulipOutboundMessage("lyn.nagara@gmail.com", true, "", "Hi!"))
 //
@@ -66,6 +67,7 @@ object ZulipMessageSender extends App {
       }
     }
   }
+
 
 ////  println(sendToZulip(target="lyn.nagara@gmail.com", content = "test", isPrivate = true))
 ////  println(registerQueue)
