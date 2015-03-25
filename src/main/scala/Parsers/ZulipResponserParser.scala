@@ -31,22 +31,37 @@ object ZulipResponserParser extends App {
     }
   }
 
+  // Parse queue message responses
   def parseQueueMessageResponse(msg:String):Either[ParsingFailure, QueueMessageJsonProtocolsResult] = {
-    import QueueMessageJsonProtocols._
+    val map = msg.parseJson.asJsObject.fields
     try {
-      Right(msg.parseJson.convertTo[QueueMessageJson])
-    }
-    catch {
-      case e: DeserializationException => {
-        try {
-          Right(msg.parseJson.convertTo[QueueRequestErrorJson])
-        }
-        catch {
-          case e: DeserializationException => Left(ParsingError(e.getMessage))
-        }
+      List("msg", "result", "queue_id", "events") flatMap (map get _) match {
+        case JsString(message) :: JsString("success") :: JsNumber(queue_id) :: Nil => Right(QueueMessageJson(msg=message, result="success", queue_id=queue_id.toInt))
+        case JsString(message) :: JsString("error") :: JsNumber(queue_id) :: Nil => Right(QueueRequestErrorJson(msg=message, result= "error", queue_id=queue_id.toInt))
+        case _ => Left(ParsingError(s"""Something was wrong with this map that we got: ${map}"""))
       }
-
+    } catch {
+      case e: DeserializationException => Left(ParsingError(map.toString))
     }
+
+
+
+
+
+    // try {
+    //   Right(msg.parseJson.convertTo[QueueMessageJson])
+    // }
+    // catch {
+    //   case e: DeserializationException => {
+    //     try {
+    //       Right(msg.parseJson.convertTo[QueueRequestErrorJson])
+    //     }
+    //     catch {
+    //       case e: DeserializationException => Left(ParsingError(e.getMessage))
+    //     }
+    //   }
+
+    // }
   }
 
 
@@ -95,7 +110,7 @@ object ZulipResponserParser extends App {
 //            |}""".stripMargin.parseJson.asJsObject.fields)
 //  println(parseQueueMessageResponse("""{"msg":"Invalid authorization header for basic auth","result":"error"}"""))
 
-  println(parseUserMessageResponse("""{"msg": "", "result": "success", "id": 12345678}"""))
+  println(parseQueueMessageResponse("""{"msg": "", "result": "success", "queue_id": 12345678, events:[1,2,3,4]}"""))
   // parseResponse()
 
 }
