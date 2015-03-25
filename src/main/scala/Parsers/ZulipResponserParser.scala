@@ -8,13 +8,15 @@ import DefaultJsonProtocol._
  * Created by gmgilmore on 3/24/15.
  */
 
+
+import MessageClasses.ProcessedZulipInboundMessageJSONS._
 sealed trait ParsingFailure
 object ZulipResponserParser extends App {
 
   case class ParsingError(errText:String) extends ParsingFailure
 
   def parseUserMessageResponse(msg:String):Either[ParsingFailure, MessageSendingJsonProtocolsResult] = {
-    import MessageSendingJsonProtocols._
+    import BotToUserMessageSendingJsonProtocols._
     try{
       Right(msg.parseJson.convertTo[MessageSendingSuccessfulJson])
     }
