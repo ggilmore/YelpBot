@@ -16,13 +16,17 @@ sealed trait ProcessedZulipInboundMessage {
 //case class QueueMessage(contents:String, headers: String, statusCode: String, 
 //  target:String, subject:String="", isPrivate:Boolean=false, id:String) extends ProcessedZulipInboundMessage
 
-case class QueueMessageJson(result:String, msg:String, events:Array[UserRequestMessageJson])
+sealed trait QueueMessageJsonProtocolsResult
 
-case class UserRequestMessageJson(sender_email:String, content:String, subject:String, `type`:String, id:String)
+
+
+case class QueueMessageJson(result:String, msg:String, events:Array[UserRequestMessageJson]) extends QueueMessageJsonProtocolsResult
+
+case class UserRequestMessageJson(sender_email:String, content:String, subject:String, `type`:String, id:String) extends QueueMessageJsonProtocolsResult
 
 case class GenericErrorJson(result:String, msg:String) extends MessageSendingJsonProtocolsResult
 
-case class QueueRequestErrorJson(result:String, msg:String, queue_id:String)
+case class QueueRequestErrorJson(result:String, msg:String, queue_id:Int) extends QueueMessageJsonProtocolsResult
 
 object QueueMessageJsonProtocols extends DefaultJsonProtocol {
   implicit val messageFormat = jsonFormat5(UserRequestMessageJson)
@@ -50,6 +54,11 @@ object MessageSendingJsonProtocols extends DefaultJsonProtocol {
   implicit val msgSendingSuccFormat = jsonFormat3(MessageSendingSuccessfulJson)
   implicit val errorFormat = jsonFormat2(GenericErrorJson)
 }
+
+
+
+
+
 //
 //case class RequestEventQueue(contents:String, headers: String, statusCode: String,
 //  message:String, lastEventId:String, result:Boolean, queueId:String) extends ProcessedZulipInboundMessage

@@ -30,6 +30,27 @@ object ZulipResponserParser extends App {
     }
   }
 
+  def parseQueueMessageResponse(msg:String):Either[ParsingFailure, QueueMessageJsonProtocolsResult] = {
+    import QueueMessageJsonProtocols._
+    try {
+      Right(msg.parseJson.convertTo[QueueMessageJson])
+    }
+    catch {
+      case e: DeserializationException => {
+        try {
+          Right(msg.parseJson.convertTo[QueueRequestErrorJson])
+        }
+        catch {
+          case e: DeserializationException => Left(ParsingError(e.getMessage))
+        }
+      }
+
+    }
+  }
+
+  println(parseQueueMessageResponse("""{"msg":"Invalid authorization header for basic auth","result":"error"}"""))
+
+
 //  def parseResponse[T](protocol:DefaultJsonProtocol, candidates:Seq[T], msg:String) = {
 //
 //    protocol.
