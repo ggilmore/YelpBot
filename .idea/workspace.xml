@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfbbdd66-b08a-4499-bb65-1e300920edbf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/MessageClasses/ProcessedZulipInboundMessage.scala" afterPath="$PROJECT_DIR$/src/main/scala/MessageClasses/ProcessedZulipInboundMessage.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/Parsers/ZulipResponserParser.scala" afterPath="$PROJECT_DIR$/src/main/scala/Parsers/ZulipResponserParser.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="YelpBot.iws" />
@@ -1015,7 +1013,7 @@
       <workItem from="1427212253213" duration="4571000" />
       <workItem from="1427224314559" duration="2494000" />
       <workItem from="1427295825417" duration="5706000" />
-      <workItem from="1427302903280" duration="3535000" />
+      <workItem from="1427302903280" duration="3568000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1427153681306</created>
@@ -1071,11 +1069,17 @@
       <option name="project" value="LOCAL" />
       <updated>1427307604227</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="I think I wrote parseUserMessageResponse, not sure though">
+      <created>1427309434968</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1427309434968</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21912000" />
+    <option name="totallyTimeSpent" value="21945000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="23" width="1920" height="1057" extended-state="6" />
@@ -1103,7 +1107,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15884861" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31606218" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31606218" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1165,7 +1169,8 @@
     <MESSAGE value="made method signature changes to options now" />
     <MESSAGE value="I did many things. I wrote many questionable JSON formats. I tagged all the RawZulipInboundMessages. I started to write the ZulipParser thing, and many other very important sounding things." />
     <MESSAGE value="fixed syntax errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed syntax errors" />
+    <MESSAGE value="I think I wrote parseUserMessageResponse, not sure though" />
+    <option name="LAST_COMMIT_MESSAGE" value="I think I wrote parseUserMessageResponse, not sure though" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
