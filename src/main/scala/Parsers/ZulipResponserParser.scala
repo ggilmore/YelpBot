@@ -32,11 +32,13 @@ object ZulipResponserParser extends App {
 
   def parseResponse[T](protocol:DefaultJsonProtocol, candidates:Seq[T], msg:String) = {
 
-    def tryConversion(candidates:Seq[T], errText:String = ""):Either[ParsingFailure, T] {
+    import protocol._
+    def tryConversion(candidates:Seq[T], errText:String = ""):Either[ParsingFailure, T] = {
       if (candidates.isEmpty) Left(ParsingError(errText))
       else {
         try {
-          Right(msg.parseJson.convertTo[candidates(0)])
+          val head = candidates.head
+          Right(msg.parseJson.convertTo[head.type])
         }
         catch {
           case e: DeserializationException => tryConversion(candidates.drop(1), e.getMessage)
@@ -47,6 +49,8 @@ object ZulipResponserParser extends App {
     tryConversion(candidates)
   }
 
+  val thingy:Seq[MessageSendingJsonProtocolsResult] =  Seq(GenericErrorJson:MessageSendingJsonProtocolsResult,MessageSendingSuccessfulJson: MessageSendingJsonProtocolsResult)
+  println(parseResponse[MessageSendingJsonProtocolsResult](MessageSendingJsonProtocols, Vector(GenericErrorJson,MessageSendingSuccessfulJson):Vector[MessageSendingSuccessfulJson], ""))
   // parseResponse()
 
 }
