@@ -30,27 +30,28 @@ object ZulipResponserParser extends App {
     }
   }
 
-  def parseResponse[T](protocol:DefaultJsonProtocol, candidates:Seq[T], msg:String) = {
+//  def parseResponse[T](protocol:DefaultJsonProtocol, candidates:Seq[T], msg:String) = {
+//
+//    protocol.
+//    def tryConversion(candidates:Seq[T], errText:String = ""):Either[ParsingFailure, T] = {
+//      if (candidates.isEmpty) Left(ParsingError(errText))
+//      else {
+//        try {
+//          val head = candidates.head
+//          Right(msg.parseJson.convertTo[head.type])
+//        }
+//        catch {
+//          case e: DeserializationException => tryConversion(candidates.drop(1), e.getMessage)
+//        }
+//
+//      }
+//    }
+//    tryConversion(candidates)
+//  }
 
-    import protocol._
-    def tryConversion(candidates:Seq[T], errText:String = ""):Either[ParsingFailure, T] = {
-      if (candidates.isEmpty) Left(ParsingError(errText))
-      else {
-        try {
-          val head = candidates.head
-          Right(msg.parseJson.convertTo[head.type])
-        }
-        catch {
-          case e: DeserializationException => tryConversion(candidates.drop(1), e.getMessage)
-        }
-
-      }
-    }
-    tryConversion(candidates)
-  }
-
-  val thingy:Seq[MessageSendingJsonProtocolsResult] =  Seq(GenericErrorJson:MessageSendingJsonProtocolsResult,MessageSendingSuccessfulJson: MessageSendingJsonProtocolsResult)
-  println(parseResponse[MessageSendingJsonProtocolsResult](MessageSendingJsonProtocols, Vector(GenericErrorJson,MessageSendingSuccessfulJson):Vector[MessageSendingSuccessfulJson], ""))
+//  val genError = GenericErrorJson("", "")
+//  val msgSendSuccessfulJson = MessageSendingSuccessfulJson("","","")
+  println(parseUserMessageResponse("""{"msg": "", "result": "success", "id": 12345678}"""))
   // parseResponse()
 
 }

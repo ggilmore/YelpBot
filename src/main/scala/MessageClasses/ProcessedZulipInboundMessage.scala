@@ -44,7 +44,7 @@ object RequestQueueIDJsonProtocols extends DefaultJsonProtocol {
 
 sealed trait MessageSendingJsonProtocolsResult
 
-case class MessageSendingSuccessfulJson(msg:String, result: String, id: String) extends MessageSendingJsonProtocolsResult
+case class MessageSendingSuccessfulJson(msg:String, result: String, id: Int) extends MessageSendingJsonProtocolsResult
 
 object MessageSendingJsonProtocols extends DefaultJsonProtocol {
   implicit val msgSendingSuccFormat = jsonFormat3(MessageSendingSuccessfulJson)
