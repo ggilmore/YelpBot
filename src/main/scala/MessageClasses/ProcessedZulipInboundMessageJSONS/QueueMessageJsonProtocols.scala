@@ -8,15 +8,15 @@ import spray.json.DefaultJsonProtocol
 
 sealed trait QueueMessageJsonProtocolsResult
 
-case class QueueMessageJson(result:String, msg:String, events:Array[UserRequestMessageJson]) extends QueueMessageJsonProtocolsResult
+case class QueueMessageJson(result:String, msg:String, events:Vector[UserRequestMessageJson], last_event_id:Int) extends QueueMessageJsonProtocolsResult
 
 // case class QueueMessageErrorJson(result:String, msg:String, queue_id:Int=-1) extends QueueMessageJsonProtocolsResult
 
 case class UserRequestMessageJson(sender_email:String, content:String, subject:String, `type`:String, id:String) extends QueueMessageJsonProtocolsResult
 
-case class QueueRequestErrorJson(result:String, msg:String, queue_id:Option[Int]) extends QueueMessageJsonProtocolsResult
-
-object QueueMessageJsonProtocols extends DefaultJsonProtocol {
-  implicit val messageFormat = jsonFormat5(UserRequestMessageJson)
-  implicit val queueMessageJsonFormat = jsonFormat3(QueueMessageJson)
-  implicit val queueRequestErrorJson = jsonFormat3(QueueRequestErrorJson)}
+case class QueueRequestErrorJson(result:String, msg:String) extends QueueMessageJsonProtocolsResult
+//
+//object QueueMessageJsonProtocols extends DefaultJsonProtocol {
+//  implicit val messageFormat = jsonFormat5(UserRequestMessageJson)
+//  implicit val queueMessageJsonFormat = jsonFormat3(QueueMessageJson)
+//  implicit val queueRequestErrorJson = jsonFormat3(QueueRequestErrorJson)}

@@ -35,34 +35,44 @@ object ZulipResponserParser extends App {
   def parseQueueMessageResponse(msg:String):Either[ParsingFailure, QueueMessageJsonProtocolsResult] = {
     val map = msg.parseJson.asJsObject.fields
     try {
-      List("msg", "result", "queue_id", "events") flatMap (map get _) match {
-        case JsString(message) :: JsString("success") :: JsNumber(queue_id) :: Nil => Right(QueueMessageJson(msg=message, result="success", queue_id=queue_id.toInt))
-        case JsString(message) :: JsString("error") :: JsNumber(queue_id) :: Nil => Right(QueueRequestErrorJson(msg=message, result= "error", queue_id=queue_id.toInt))
-        case _ => Left(ParsingError(s"""Something was wrong with this map that we got: ${map}"""))
+      List("msg", "result", "last_event_id", "events") flatMap (map get _) match {
+        case JsString(message) :: JsString("success") :: JsNumber(last_event_id) :: JsArray(events) :: Nil => Right(QueueMessageJson(msg = message, result = "success", last_event_id = last_event_id.toInt, events = processEvents(events)))
+        case JsString(message) :: JsString("error") :: _ => Right(QueueRequestErrorJson(msg = message, result = "error"))
+        case _ => Left(ParsingError( s"""Something was wrong with this map that we got: ${map}"""))
       }
     } catch {
       case e: DeserializationException => Left(ParsingError(map.toString))
     }
-
-
-
-
-
-    // try {
-    //   Right(msg.parseJson.convertTo[QueueMessageJson])
-    // }
-    // catch {
-    //   case e: DeserializationException => {
-    //     try {
-    //       Right(msg.parseJson.convertTo[QueueRequestErrorJson])
-    //     }
-    //     catch {
-    //       case e: DeserializationException => Left(ParsingError(e.getMessage))
-    //     }
-    //   }
-
-    // }
   }
+
+  def processEvents(events:Vector[JsValue]):Vector[UserRequestMessageJson] = {    
+    def processEvents0(events:Vector[JsValue], processedEvents:Vector[UserRequestMessageJson]):Vector[UserRequestMessageJson] = {
+      events match {
+        case IndexedSeq() => processedEvents
+        case x +: xs => processEvents0(xs, processedEvents :+ processEvent(x))
+      }
+      // return Vector()
+    }
+    processEvents0(events, Vector())
+  }
+
+  def processEvent(event:JsValue):UserRequestMessageJson = {
+    val map = event.asJsObject.fields
+    List("message") flatMap (map get _) match {
+      case Nil => throw new Exception
+      case msg :: _ => processMessage(msg)
+    }
+  }
+
+  def processMessage(msg:JsValue):Either[ParsingFailure,UserRequestMessageJson] = {
+    val map = msg.asJsObject.fields
+    List("id", "type", "subject", "sender_email") flatMap (map get _) match {
+      case JsNumber(id) :: JsString(t) :: JsString(subject) :: JsString(sender_email) :: Nil =>
+        Right(QueueMessageJson(id = id, `type` = t, subject = subject, sender_email = sender_email, events = processEvents(events)))
+      case _ => throw new Exception // Anything else, throw exception
+    }
+  }
+
 
 
 //  println("""{
@@ -108,9 +118,23 @@ object ZulipResponserParser extends App {
 //            |    "id": 0
 //            |  }]
 //            |}""".stripMargin.parseJson.asJsObject.fields)
-//  println(parseQueueMessageResponse("""{"msg":"Invalid authorization header for basic auth","result":"error"}"""))
+ // println(parseQueueMessageResponse("""{"msg":"Invalid authorization header for basic auth","result":"error"}"""))
 
-  println(parseQueueMessageResponse("""{"msg": "", "result": "success", "queue_id": 12345678, events:[1,2,3,4]}"""))
-  // parseResponse()
+  println(parseQueueMessageResponse("""{"msg": "", "result": "success", "last_event_id": 12345678, "events":[
+    {"flags":[],
+    "message":{
+      "content_type":"text\/x-markdown",
+      "avatar_url":"https:\/\/secure.gravatar.com\/avatar\/5298bd30a2032597f9256c8ca889aec2?d=identicon",
+      "timestamp":1427229261,"display_recipient":[
+        {"domain":"students.hackerschool.com",
+        "short_name":"lyn.nagara","id":7635,"is_mirror_dummy":false,"full_name":"Lyn Nagara (SP1'15)",
+        "email":"lyn.nagara@gmail.com"},{"domain":"students.hackerschool.com","short_name":"yelpbot-bot",
+        "email":"yelpbot-bot@students.hackerschool.com","is_mirror_dummy":false,"full_name":"YelpBot","id":7822}
+      ],
+      "sender_id":7635,
+      "sender_full_name":"Lyn Nagara (SP1'15)","sender_domain":"students.hackerschool.com",
+    "content":"hi","gravatar_hash":"5298bd30a2032597f9256c8ca889aec2","recipient_id":40186,"client":"website",
+    "sender_email":"lyn.nagara@gmail.com","subject_links":[],"subject":"","type":"private","id":37115712,
+    "sender_short_name":"lyn.nagara"},"type":"message","id":0}]}"""))
 
 }
