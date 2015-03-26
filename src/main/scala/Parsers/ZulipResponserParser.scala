@@ -45,30 +45,30 @@ object ZulipResponserParser extends App {
     }
   }
 
-  def processEvents(events:Vector[JsValue]):Vector[UserRequestMessageJson] = {    
-    def processEvents0(events:Vector[JsValue], processedEvents:Vector[UserRequestMessageJson]):Vector[UserRequestMessageJson] = {
-      events match {
-        case IndexedSeq() => processedEvents
-        case x +: xs => processEvents0(xs, processedEvents :+ processEvent(x))
+  def processEvents(events:Seq[JsValue]):Seq[UserRequestMessageJson] = {
+    def processEvents0(events:Seq[JsValue], processedEvents:Seq[UserRequestMessageJson]):Seq[UserRequestMessageJson] = {
+      if (events.nonEmpty) processEvent(events.head) match {
+        case Right(json) => processEvents0(events.tail, (processedEvents + json))
+        case Left
       }
+      else
       // return Vector()
     }
-    processEvents0(events, Vector())
+    processEvents0(events, Seq())
   }
 
-  def processEvent(event:JsValue):UserRequestMessageJson = {
+  def processEvent(event:JsValue):Either[ParsingFailure,UserRequestMessageJson] = {
     val map = event.asJsObject.fields
     List("message") flatMap (map get _) match {
-      case Nil => throw new Exception
       case msg :: _ => processMessage(msg)
     }
   }
 
   def processMessage(msg:JsValue):Either[ParsingFailure,UserRequestMessageJson] = {
     val map = msg.asJsObject.fields
-    List("id", "type", "subject", "sender_email") flatMap (map get _) match {
-      case JsNumber(id) :: JsString(t) :: JsString(subject) :: JsString(sender_email) :: Nil =>
-        Right(QueueMessageJson(id = id, `type` = t, subject = subject, sender_email = sender_email, events = processEvents(events)))
+    List("id", "type", "subject", "sender_email", "content") flatMap (map get _) match {
+      case JsNumber(id) :: JsString(t) :: JsString(subject) :: JsString(sender_email) :: JsString(content) :: Nil =>
+        Right(UserRequestMessageJson(id = id.toString, `type` = t, subject = subject, sender_email = sender_email, content = content))
       case _ => throw new Exception // Anything else, throw exception
     }
   }
