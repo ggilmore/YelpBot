@@ -8,7 +8,7 @@ import spray.json.DefaultJsonProtocol
 
 sealed trait QueueMessageJsonProtocolsResult
 
-case class QueueMessageJson(result:String, msg:String, events:Vector[UserRequestMessageJson], last_event_id:Int) extends QueueMessageJsonProtocolsResult
+case class QueueMessageJson(result:String, msg:String, events:Seq[UserRequestMessageJson], last_event_id:Int) extends QueueMessageJsonProtocolsResult
 
 // case class QueueMessageErrorJson(result:String, msg:String, queue_id:Int=-1) extends QueueMessageJsonProtocolsResult
 

@@ -48,11 +48,10 @@ object ZulipResponserParser extends App {
   def processEvents(events:Seq[JsValue]):Seq[UserRequestMessageJson] = {
     def processEvents0(events:Seq[JsValue], processedEvents:Seq[UserRequestMessageJson]):Seq[UserRequestMessageJson] = {
       if (events.nonEmpty) processEvent(events.head) match {
-        case Right(json) => processEvents0(events.tail, (processedEvents + json))
-        case Left
+        case Right(json) => processEvents0(events.tail, processedEvents :+ json)
+        case Left(error) => processEvents0(events.tail, processedEvents)
       }
-      else
-      // return Vector()
+      else processedEvents
     }
     processEvents0(events, Seq())
   }
