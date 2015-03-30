@@ -5,6 +5,7 @@ import spray.json._
 import DefaultJsonProtocol._
 
 import scala.collection.Map._
+import scalaj.http.HttpResponse
 
 /**
  * Created by gmgilmore on 3/24/15.
@@ -17,6 +18,8 @@ object ZulipResponserParser extends App {
 
   case class ParsingError(errText:String) extends ParsingFailure
 
+
+  def getMessageBodyFromResponse(response:HttpResponse[String]):String = response.body
 
   def parseUserMessageResponse(msg:String):Either[ParsingFailure, MessageSendingJsonProtocolsResult] = {
     val map = msg.parseJson.asJsObject.fields
@@ -56,6 +59,7 @@ object ZulipResponserParser extends App {
     processEvents0(events, Seq())
   }
 
+
   def processEvent(event:JsValue):Either[ParsingFailure,UserRequestMessageJson] = {
     val map = event.asJsObject.fields
     List("message") flatMap (map get _) match {
@@ -64,6 +68,12 @@ object ZulipResponserParser extends App {
     }
   }
 
+  /**
+   * @param msg an instance of JsValue with at least String -> String pairs with keys: id, type, subject,
+   *            sender_email, and content whose values all map to strings
+   * @return a UserRequestMessageJson if the parsing of "msg" was successful, or ParsingFailure if there was some kind
+   *         of issue when parsing the "msg"
+   */
   def processMessage(msg:JsValue):Either[ParsingFailure,UserRequestMessageJson] = {
     val map = msg.asJsObject.fields
     List("id", "type", "subject", "sender_email", "content") flatMap (map get _) match {
