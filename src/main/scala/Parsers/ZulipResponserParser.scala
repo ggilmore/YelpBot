@@ -69,7 +69,7 @@ object ZulipResponserParser extends App {
     List("id", "type", "subject", "sender_email", "content") flatMap (map get _) match {
       case JsNumber(id) :: JsString(t) :: JsString(subject) :: JsString(sender_email) :: JsString(content) :: Nil =>
         Right(UserRequestMessageJson(id = id.toString, `type` = t, subject = subject, sender_email = sender_email, content = content))
-      case _ => throw new Exception // Anything else, throw exception
+      case _ => Left(ParsingError(s"""Something was wrong with this map that we got: ${map}"""))
     }
   }
 
