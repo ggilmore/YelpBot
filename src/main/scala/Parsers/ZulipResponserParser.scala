@@ -21,6 +21,17 @@ object ZulipResponserParser extends App {
 
   def getMessageBodyFromResponse(response:HttpResponse[String]):String = response.body
 
+
+
+
+
+  /**
+   * @param "msg" is an instance of String, that represents the json response when a message is sent to a user or stream, 
+   * that maps "msg" and "result" to JsStrings, and "id" to JsNumber
+   * @return Either MessageSendingJsonProtocolsResult if the parsing of "msg", "result" and "id" are successful, 
+   * or ParsingFailure if there was some kind of issue, such as if "msg", or "result" or "id" are missing
+   */
+
   def parseUserMessageResponse(msg:String):Either[ParsingFailure, MessageSendingJsonProtocolsResult] = {
     val map = msg.parseJson.asJsObject.fields
     try {
@@ -34,7 +45,14 @@ object ZulipResponserParser extends App {
     }
   }
 
-  // Parse queue message responses
+
+  /**
+   * @param "msg" is an instance of String, that represents the json received from a get queue messages API call, 
+   * that maps "msg" and "result" to JsStrings, "last_event_id" to JsNumber, and "events" to JsArray
+   * @return Either QueueMessageJsonProtocolsResult if the parsing of "msg" was successful, 
+   * or ParsingFailure if there was some kind of issue, such as if "result", or "events" is missing
+   */
+
   def parseQueueMessageResponse(msg:String):Either[ParsingFailure, QueueMessageJsonProtocolsResult] = {
     val map = msg.parseJson.asJsObject.fields
     try {
@@ -51,8 +69,8 @@ object ZulipResponserParser extends App {
 
   /**
    * @param events an instance of Seq[JsValue]
-   * @return a UserRequestMessageJson if the parsing of "event" was successful, or ParsingFailure if there was some kind
-   * of issue when parsing the "event", such as if "message" is missing/incorrectly formatted as described by processedMessage
+   * @return a Tuple (List[ParsingFailure], List[UserRequestMessageJson]) where List[ParsingFailure] represents the list of
+   * events that have failed to parse, and List[UserRequestMessageJson] is the list of successfully parsed events
    */
 
   def processEvents(events:Seq[JsValue]):(List[ParsingFailure], List[UserRequestMessageJson]) = {
