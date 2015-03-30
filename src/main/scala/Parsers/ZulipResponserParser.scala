@@ -50,13 +50,13 @@ object ZulipResponserParser extends App {
 
 
   /**
-   * @param "events" an instance of Seq[JsValue] 
+   * @param events an instance of Seq[JsValue]
    * @return a UserRequestMessageJson if the parsing of "event" was successful, or ParsingFailure if there was some kind
    * of issue when parsing the "event", such as if "message" is missing/incorrectly formatted as described by processedMessage
    */
 
-  def processEvents(events:Seq[JsValue]):Seq[UserRequestMessageJson] = {
-    def processEvents0(events:Seq[JsValue], processedEvents:Seq[Either[ParsingFailure, UserRequestMessageJson]]):Seq[UserRequestMessageJson] = {
+  def processEvents(events:Seq[JsValue]):(List[ParsingFailure], List[UserRequestMessageJson]) = {
+    def processEvents0(events:Seq[JsValue], processedEvents:Seq[Either[ParsingFailure, UserRequestMessageJson]]):Seq[Either[ParsingFailure, UserRequestMessageJson]] = {
       if (events.nonEmpty) {
         processEvents0(events.tail, processedEvents :+ processEvent(events.head))
       }
