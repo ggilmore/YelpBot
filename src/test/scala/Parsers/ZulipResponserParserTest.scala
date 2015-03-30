@@ -16,11 +16,16 @@ import Parsers._
   * - json with "type", "subject", "sender_email", "content" values that are not JsString
   */
 
+class ZulipResponserParserTest extends FlatSpec with Matchers {
+  "processMessage" should "successfully process a msg when id, type, subject, sender_email and content are present" in {
+    val msg = """{"id":1, "type":"private", "subject":"hi", "sender_email":"lyn.nagara@gmail.com", "content":"booya"}""".parseJson
 
-class ZulipOutBoundMessageTest extends FlatSpec with Matchers {
+    // assert(
+    //   processMessage(msg) 
 
+    // )
 
-
+  }
 
 
 
