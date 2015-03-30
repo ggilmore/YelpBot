@@ -31,13 +31,16 @@ class ZulipResponserParserTest extends FlatSpec with Matchers {
       }
       case Left(err) => fail()
     }
-
-    // assert(
-    //   processMessage(msg) 
-
-    // )
-
   }
+
+  "processMessage" should "return a ParsingError if id is missing" in {
+    val msg = """{"type":"private", "subject":"hi", "sender_email":"lyn.nagara@gmail.com", "content":"booya"}""".parseJson
+    (Parsers.ZulipResponserParser.processMessage(msg)) match {
+      case Right(msg) => fail()
+      case Left(error) => assert(true) 
+    }
+  }
+
 
 
 
