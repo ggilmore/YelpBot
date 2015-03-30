@@ -60,6 +60,7 @@ object ZulipResponserParser extends App {
     val map = event.asJsObject.fields
     List("message") flatMap (map get _) match {
       case msg :: _ => processMessage(msg)
+      case Nil => Left(ParsingError(s"""Something was wrong with this map that we got: ${map}"""))
     }
   }
 
