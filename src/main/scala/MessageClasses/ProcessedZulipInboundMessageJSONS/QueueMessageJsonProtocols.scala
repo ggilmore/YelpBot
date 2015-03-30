@@ -15,6 +15,8 @@ case class QueueMessageJson(result:String, msg:String, events:Seq[UserRequestMes
 case class UserRequestMessageJson(sender_email:String, content:String, subject:String, `type`:String, id:String) extends QueueMessageJsonProtocolsResult
 
 case class QueueRequestErrorJson(result:String, msg:String) extends QueueMessageJsonProtocolsResult
+
+case object NoParsedMessages extends QueueMessageJsonProtocolsResult
 //
 //object QueueMessageJsonProtocols extends DefaultJsonProtocol {
 //  implicit val messageFormat = jsonFormat5(UserRequestMessageJson)

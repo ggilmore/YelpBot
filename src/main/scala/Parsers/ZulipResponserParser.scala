@@ -26,7 +26,7 @@ object ZulipResponserParser extends App {
 
 
   /**
-   * @param "msg" is an instance of String, that represents the json response when a message is sent to a user or stream, 
+   * @param msg is an instance of String, that represents the json response when a message is sent to a user or stream,
    * that maps "msg" and "result" to JsStrings, and "id" to JsNumber
    * @return Either MessageSendingJsonProtocolsResult if the parsing of "msg", "result" and "id" are successful, 
    * or ParsingFailure if there was some kind of issue, such as if "msg", or "result" or "id" are missing
@@ -47,22 +47,26 @@ object ZulipResponserParser extends App {
 
 
   /**
-   * @param "msg" is an instance of String, that represents the json received from a get queue messages API call, 
+   * @param msg is an instance of String, that represents the json received from a get queue messages API call,
    * that maps "msg" and "result" to JsStrings, "last_event_id" to JsNumber, and "events" to JsArray
    * @return Either QueueMessageJsonProtocolsResult if the parsing of "msg" was successful, 
    * or ParsingFailure if there was some kind of issue, such as if "result", or "events" is missing
    */
 
-  def parseQueueMessageResponse(msg:String):Either[ParsingFailure, QueueMessageJsonProtocolsResult] = {
+  def parseQueueMessageResponse(msg:String):(List[ParsingFailure], QueueMessageJsonProtocolsResult) = {
     val map = msg.parseJson.asJsObject.fields
     try {
       List("msg", "result", "last_event_id", "events") flatMap (map get _) match {
-        case JsString(message) :: JsString("success") :: JsNumber(last_event_id) :: JsArray(events) :: Nil => Right(QueueMessageJson(msg = message, result = "success", last_event_id = last_event_id.toInt, events = processEvents(events)))
-        case JsString(message) :: JsString("error") :: _ => Right(QueueRequestErrorJson(msg = message, result = "error"))
-        case _ => Left(ParsingError( s"""Something was wrong with this map that we got: ${map}"""))
+        case JsString(message) :: JsString("success") :: JsNumber(last_event_id) :: JsArray(events) :: Nil => {
+          val (errors, parsedEvents) = processEvents(events)
+          (errors, QueueMessageJson(msg = message, result = "success",
+            last_event_id = last_event_id.toInt, events = parsedEvents))
+        }
+        case JsString(message) :: JsString("error") :: _ => (List(), QueueRequestErrorJson(msg = message, result = "error"))
+        case _ => (List(ParsingError( s"""Something was wrong with this map that we got: ${map}""")), NoParsedMessages)
       }
     } catch {
-      case e: DeserializationException => Left(ParsingError(map.toString))
+      case e: DeserializationException => (List(ParsingError(map.toString)), NoParsedMessages)
     }
   }
 
@@ -95,7 +99,7 @@ object ZulipResponserParser extends App {
 
 
   /**
-   * @param "event" an instance of JsValue with at least the String -> JsValue pair: "message"
+   * @param event an instance of JsValue with at least the String -> JsValue pair: "message"
    * @return a UserRequestMessageJson if the parsing of "event" was successful, or ParsingFailure if there was some kind
    * of issue when parsing the "event", such as if "message" is missing/incorrectly formatted as described by processedMessage
    */
