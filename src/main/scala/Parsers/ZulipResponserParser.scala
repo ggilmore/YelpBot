@@ -48,17 +48,39 @@ object ZulipResponserParser extends App {
     }
   }
 
+
+  /**
+   * @param "events" an instance of Seq[JsValue] 
+   * @return a UserRequestMessageJson if the parsing of "event" was successful, or ParsingFailure if there was some kind
+   * of issue when parsing the "event", such as if "message" is missing/incorrectly formatted as described by processedMessage
+   */
+
   def processEvents(events:Seq[JsValue]):Seq[UserRequestMessageJson] = {
-    def processEvents0(events:Seq[JsValue], processedEvents:Seq[UserRequestMessageJson]):Seq[UserRequestMessageJson] = {
-      if (events.nonEmpty) processEvent(events.head) match {
-        case Right(json) => processEvents0(events.tail, processedEvents :+ json)
-        case Left(error) => processEvents0(events.tail, processedEvents)
+    def processEvents0(events:Seq[JsValue], processedEvents:Seq[Either[ParsingFailure, UserRequestMessageJson]]):Seq[UserRequestMessageJson] = {
+      if (events.nonEmpty) {
+        processEvents0(events.tail, processedEvents :+ processEvent(events.head))
       }
       else processedEvents
     }
-    processEvents0(events, Seq())
+    split[ParsingFailure, UserRequestMessageJson](processEvents0(events, Seq()).toList)
   }
 
+
+  def split[E, V](results: List[Either[E, V]]): (List[E], List[V]) = {
+    def loop(listE: List[E], listV: List[V], rest: List[Either[E, V]]): (List[E], List[V]) = rest match {
+      case Nil => (listE, listV)
+      case Right(v) :: xs => loop(listE, listV :+ v, xs)
+      case Left(e) :: xs => loop(listE :+ e, listV, xs)
+    }
+    loop(List(), List(), results)
+  }
+
+
+  /**
+   * @param "event" an instance of JsValue with at least the String -> JsValue pair: "message"
+   * @return a UserRequestMessageJson if the parsing of "event" was successful, or ParsingFailure if there was some kind
+   * of issue when parsing the "event", such as if "message" is missing/incorrectly formatted as described by processedMessage
+   */
 
   def processEvent(event:JsValue):Either[ParsingFailure,UserRequestMessageJson] = {
     val map = event.asJsObject.fields
@@ -69,10 +91,10 @@ object ZulipResponserParser extends App {
   }
 
   /**
-   * @param msg an instance of JsValue with at least String -> String pairs with keys: id, type, subject,
-   *            sender_email, and content whose values all map to strings
+   * @param msg an instance of JsValue with at least String -> JsString pairs: type, subject,
+   *            sender_email, and content, whose values all map to strings, and String -> JsNumber pair: id
    * @return a UserRequestMessageJson if the parsing of "msg" was successful, or ParsingFailure if there was some kind
-   *         of issue when parsing the "msg"
+   *         of issue when parsing the "msg", such as if one of above stated keys is missing
    */
   def processMessage(msg:JsValue):Either[ParsingFailure,UserRequestMessageJson] = {
     val map = msg.asJsObject.fields
@@ -130,7 +152,8 @@ object ZulipResponserParser extends App {
 //            |}""".stripMargin.parseJson.asJsObject.fields)
  // println(parseQueueMessageResponse("""{"msg":"Invalid authorization header for basic auth","result":"error"}"""))
 
-  println(parseQueueMessageResponse("""{"msg": "", "result": "success", "last_event_id": 12345678, "events":[
+  println(parseQueueMessageResponse("""{"msg": "", "result": "success", "last_event_id": 12345678, 
+    "events":[
     {"flags":[],
     "message":{
       "content_type":"text\/x-markdown",
