@@ -15,6 +15,7 @@ import org.scalatest._
 
 class ZulipOutBoundMessageTest extends FlatSpec with Matchers {
 
+
   "ZulipOutBoundMessage" should "be fine when creating a message with all parameters specified and not null" in {
     val msg = ZulipOutboundMessage(target = "Lyn", isPrivate = true, subject = "", content = "Hello.")
   }

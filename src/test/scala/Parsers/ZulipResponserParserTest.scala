@@ -1,5 +1,7 @@
 import collection.mutable.Stack
 import org.scalatest._
+import spray.json._
+import Parsers.ZulipResponserParser
 import Parsers._
 
   /**
@@ -19,6 +21,16 @@ import Parsers._
 class ZulipResponserParserTest extends FlatSpec with Matchers {
   "processMessage" should "successfully process a msg when id, type, subject, sender_email and content are present" in {
     val msg = """{"id":1, "type":"private", "subject":"hi", "sender_email":"lyn.nagara@gmail.com", "content":"booya"}""".parseJson
+    (Parsers.ZulipResponserParser.processMessage(msg)) match {
+      case Right(msg) => {
+        assert(msg.id == "1")
+        assert(msg.`type`=="private")
+        assert(msg.content == "booya")
+        assert (msg.sender_email == "lyn.nagara@gmail.com")
+        assert(msg.subject == "hi")
+      }
+      case Left(err) => fail()
+    }
 
     // assert(
     //   processMessage(msg) 
